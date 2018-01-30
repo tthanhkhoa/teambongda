@@ -8,22 +8,21 @@
     <title>Đăng ký đá bóng SPKT</title>
 
     <!-- Loading third party fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|" rel="stylesheet" type="text/css">
-    <link href="{{secure_asset('fonts/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="{{asset('fonts/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
     <!-- Loading main css file -->
-    <link rel="stylesheet" href="{{secure_asset('style.css')}}">
+    <link rel="stylesheet" href="{{asset('style.css')}}">
 
     <!--[if lt IE 9]>
-    <script src="{{secure_asset('js/ie-support/html5.js')}}"></script>
-    <script src="{{secure_asset('js/ie-support/respond.js')}}"></script>
+    <script src="{{asset('js/ie-support/html5.js')}}"></script>
+    <script src="{{asset('js/ie-support/respond.js')}}"></script>
     <![endif]-->
 
 </head>
 <body>
 
 <div class="site-content">
-    <div class="hero" data-bg-image="{{secure_asset('images/header-bg.jpg')}}">
+    <div class="hero" data-bg-image="{{asset('images/header-bg.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -34,7 +33,7 @@
                         <ul class="check-list">
                             @php $i = 1; @endphp
                             @foreach($danhsach as $item)
-                            <li>{{ $i }} - {{$item->HoTen}} - {{$item->SoDienThoai}}</li>
+                            <li>{{ $i }} - {{$item->HoTen}} - {{$item->SoDienThoai}} - Vote Time: {{$item->VoteTime}}</li>
                                 @php $i++; @endphp
                             @endforeach
                         </ul>
@@ -101,9 +100,9 @@
     </footer> <!-- .site-footer -->
 </div>
 
-<script src="{{secure_asset('js/jquery-1.11.1.min.js')}}"></script>
-<script src="{{secure_asset('js/plugins.js')}}"></script>
-<script src="{{secure_asset('js/app.js')}}"></script>
+<script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
+<script src="{{asset('js/plugins.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
 
 </body>
 
