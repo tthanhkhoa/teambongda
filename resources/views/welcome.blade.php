@@ -8,7 +8,7 @@
     <title>Đăng ký đá bóng SPKT</title>
 
     <!-- Loading third party fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|" rel="stylesheet" type="text/css">
     <link href="{{secure_asset('fonts/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
     <!-- Loading main css file -->
