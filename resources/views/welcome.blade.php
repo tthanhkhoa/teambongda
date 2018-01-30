@@ -12,7 +12,7 @@
     <link href="{{asset('fonts/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
     <!-- Loading main css file -->
-    <link rel="stylesheet" href="{{asset('style.css')}}">
+    <link rel="stylesheet" href="style.css">
 
     <!--[if lt IE 9]>
     <script src="{{asset('js/ie-support/html5.js')}}"></script>
