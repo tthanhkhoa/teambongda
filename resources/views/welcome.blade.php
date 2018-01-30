@@ -9,21 +9,21 @@
 
     <!-- Loading third party fonts -->
     <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|" rel="stylesheet" type="text/css">
-    <link href="{{asset('fonts/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{secure_asset(asset('fonts/font-awesome.min.css'))}}" rel="stylesheet" type="text/css">
 
     <!-- Loading main css file -->
-    <link rel="stylesheet" href="{{asset('style.css')}}">
+    <link rel="stylesheet" href="{{secure_asset(asset('style.css'))}}">
 
     <!--[if lt IE 9]>
-    <script src="{{asset('js/ie-support/html5.js')}}"></script>
-    <script src="{{asset('js/ie-support/respond.js')}}"></script>
+    <script src="{{secure_asset(asset('js/ie-support/html5.js'))}}"></script>
+    <script src="{{secure_asset(asset('js/ie-support/respond.js'))}}"></script>
     <![endif]-->
 
 </head>
 <body>
 
 <div class="site-content">
-    <div class="hero" data-bg-image="{{asset('images/header-bg.jpg')}}">
+    <div class="hero" data-bg-image="{{secure_asset(asset('images/header-bg.jpg'))}}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -101,9 +101,9 @@
     </footer> <!-- .site-footer -->
 </div>
 
-<script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
-<script src="{{asset('js/plugins.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>
+<script src="{{secure_asset(asset('js/jquery-1.11.1.min.js'))}}"></script>
+<script src="{{secure_asset(asset('js/plugins.js'))}}"></script>
+<script src="{{secure_asset(asset('js/app.js'))}}"></script>
 
 </body>
 
