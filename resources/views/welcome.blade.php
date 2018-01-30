@@ -39,7 +39,7 @@
                         </ul>
                     </div>
 
-                    <div class="ribbon"> Đăng Ký <strong> Tham Gia </strong> Tại Đây </div>
+                    <div class="ribbon"><strong>Đăng Ký Tham Gia Tại Đây </strong></div>
                 </div>
                 <div class="col-md-4">
                     <div class="request-form">
@@ -88,7 +88,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>copyright 2018 Thanh Khoa. All rights reserved.</p>
+            <p>copyright 2014. All rights reserved.</p>
 
             <div class="social-links">
                 <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
