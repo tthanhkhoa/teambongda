@@ -80,7 +80,7 @@
                 <div class="row ingredient">
                     <div class="col-md-8">
                         <h2>Ghi chú</h2>
-                        <p>Nội dung</p>
+                        <p>Sân vận động Đại học Sư phạm Kỹ Thuật Tp. Hồ Chí Minh</p>
                     </div>
                 </div>
             </div>
