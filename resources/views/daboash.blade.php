@@ -178,7 +178,7 @@
                                                                 </li>
 
                                                                 <li>
-                                                                    <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                                    <a data-target="#confirm_delete" data-toggle="modal" data-id="{{$item->id}}" class="tooltip-error" data-rel="tooltip" title="Delete">
                                                                         <span class="red">
                                                                             <i class="ace-icon fa fa-trash-o bigger-120"></i>
                                                                         </span>
