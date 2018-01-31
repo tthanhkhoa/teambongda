@@ -10,7 +10,7 @@
     <!-- Loading third party fonts -->
     <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|" rel="stylesheet" type="text/css">
     <link href="{{asset('fonts/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-    < link rel="shortcut icon" href="{{ asset('soga.ico') }}" >
+    <link rel="shortcut icon" href="{{ asset('soga.ico') }}" >
     <!-- Loading main css file -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
