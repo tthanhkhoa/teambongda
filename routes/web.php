@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/daboash', function () {
+    return view('daboash');
 });
 Route::match(['get', 'post'], '/', 'DanhSachController@index')->name('home');
