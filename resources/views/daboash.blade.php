@@ -153,13 +153,13 @@
                                                 <td>{{$item->created_at}}</td>
                                                 <td>
                                                     <div class="hidden-sm hidden-xs btn-group">
-                                                        <button class="btn btn-xs btn-info">
+                                                        <a class="btn btn-xs btn-info">
                                                             <i class="ace-icon fa fa-pencil bigger-120"></i>
-                                                        </button>
+                                                        </a>
 
-                                                        <button class="btn btn-xs btn-danger">
+                                                        <a class="btn btn-xs btn-danger" data-target="#confirm_delete" data-toggle="modal" data-id="{{$item->id}}">
                                                             <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                                        </button>
+                                                        </a>
                                                     </div>
 
                                                     <div class="hidden-md hidden-lg">
@@ -232,6 +232,28 @@
         <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
             <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
         </a>
+    </div>
+
+    <div class="modal fade" id="confirm_delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <input type="hidden" name="row_id_del" id="row_id_del" value="">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Xác nhận xoá  </h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xoá Thể loại này???</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Huỷ</button>
+                    <a id="delete_" class="btn btn-danger btn-ok">Đồng ý!!</a>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /.main-container -->
 
