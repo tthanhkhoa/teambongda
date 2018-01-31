@@ -144,8 +144,8 @@
                                         </thead>
 
                                         <tbody>
+                                        @foreach($danhsach as $item)
                                             <tr>
-                                                @foreach($danhsach as $item)
                                                 <td>{{$item->id}}</td>
                                                 <td>{{$item->HoTen}}</td>
                                                 <td>{{$item->SoDienThoai}}</td>
@@ -188,39 +188,14 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                            @endforeach
                                             </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>
-                                {{ $danhsach->links() }}
-                                <ul class="pagination pull-right no-margin">
-                                    <li class="prev disabled">
-                                        <a href="#">
-                                            <i class="ace-icon fa fa-angle-double-left"></i>
-                                        </a>
-                                    </li>
-
-                                    <li class="active">
-                                        <a href="#">1</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">2</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">3</a>
-                                    </li>
-
-                                    <li class="next">
-                                        <a href="#">
-                                            <i class="ace-icon fa fa-angle-double-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
                                 <!-- /.span -->
                             </div>
+                        {{ $danhsach->links() }}
                             <!-- /.row -->
                             <div class="hr hr-18 dotted hr-double"></div>
                             <!-- PAGE CONTENT ENDS -->
