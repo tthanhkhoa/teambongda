@@ -245,7 +245,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <p>Bạn có chắc chắn muốn xoá Thể loại này???</p>
+                    <p>Bạn có chắc chắn muốn xoá trường này??</p>
                 </div>
 
                 <div class="modal-footer">
