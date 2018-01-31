@@ -26,6 +26,7 @@ class DanhSachController extends Controller
             $add->SoDienThoai = $request->SoDienThoai;
             $add->VoteTime = $request->VoteTime;
             $add->save();
+            return redirect('home');
         }
         $danhsach = DanhSachCauThu::all();
         return view('welcome', compact('danhsach'));
