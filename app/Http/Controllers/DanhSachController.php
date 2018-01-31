@@ -32,6 +32,12 @@ class DanhSachController extends Controller
         return view('welcome', compact('danhsach'));
     }
 
+    public function indexDaboash()
+    {
+        $danhsach = DanhSachCauThu::paginate(3);;
+        return view('daboash', compact('danhsach'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
