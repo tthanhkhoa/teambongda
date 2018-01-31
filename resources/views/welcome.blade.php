@@ -102,8 +102,8 @@
 </div>
 
 <script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
-{{--<script src="{{asset('js/plugins.js')}}"></script>--}}
-<script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/min/plugins-min.js')}}"></script>
+<script src="{{asset('js/min/app-min.js')}}"></script>
 
 </body>
 
