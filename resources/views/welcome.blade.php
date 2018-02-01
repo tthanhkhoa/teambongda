@@ -13,6 +13,8 @@
     <link rel="shortcut icon" href="{{ asset('soga.ico') }}" >
     <!-- Loading main css file -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}" />
+
 
     <!--[if lt IE 9]>
     <script src="{{asset('js/ie-support/html5.js')}}"></script>
