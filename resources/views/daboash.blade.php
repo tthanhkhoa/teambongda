@@ -139,6 +139,7 @@
                                                 <th>Số điện thoại</th>
                                                 <th>Vote Time</th>
                                                 <th>Thời gian đăng ký</th>
+                                                <th>Status</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -151,6 +152,13 @@
                                                 <td>{{$item->SoDienThoai}}</td>
                                                 <td>{{$item->VoteTime}}</td>
                                                 <td>{{$item->created_at}}</td>
+
+                                                <td>
+                                                    <label class="pos-rel">
+                                                        <input type="checkbox" {{$item->status == 1 ? 'checked':''}} />
+                                                        <span class="lbl"></span>
+                                                    </label>
+                                                </td>
                                                 <td>
                                                     <div class="hidden-sm hidden-xs btn-group">
                                                         <a class="btn btn-xs btn-info">
