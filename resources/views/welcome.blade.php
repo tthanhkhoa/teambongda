@@ -33,7 +33,8 @@
                     <small class="hero-subtitle">Thông tin cơ bản.</small>
                     <div class="product-features">
                         <h2>Danh sách cầu thủ : </h2>
-                        <ul class="check-list">
+                        {{--<ul class="check-list">--}}
+                        <ul>
                             @php $i = 1; @endphp
                             @foreach($danhsach as $item)
                             <li>{{ $i }} - {{$item->HoTen}} - {{$item->SoDienThoai}} - Vote Time: {{$item->VoteTime}}</li>
