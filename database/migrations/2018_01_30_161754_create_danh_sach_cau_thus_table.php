@@ -18,6 +18,7 @@ class CreateDanhSachCauThusTable extends Migration
             $table->string('HoTen');
             $table->string('SoDienThoai');
             $table->string('VoteTime');
+            $table->int('status');
             $table->timestamps();
         });
     }
