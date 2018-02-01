@@ -87,12 +87,12 @@ class DanhSachController extends Controller
                 'SoDienThoai' => 'required',
                 'VoteTime' => 'required',
             ]);
-            $add = new DanhSachCauThu();
-            $add->HoTen = $request->HoTen;
-            $add->SoDienThoai = $request->SoDienThoai;
-            $add->VoteTime = $request->VoteTime;
-            $add->save();
-            return $add;
+            $edit = DanhSachCauThu::find($request->id);
+            $edit->HoTen = $request->HoTen;
+            $edit->SoDienThoai = $request->SoDienThoai;
+            $edit->VoteTime = $request->VoteTime;
+            $edit->save();
+            return $edit;
         }
     }
 
