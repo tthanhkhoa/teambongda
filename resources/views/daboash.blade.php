@@ -161,7 +161,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="hidden-sm hidden-xs btn-group">
-                                                        <a class="btn btn-xs btn-info" data-target="#AddModel" data-toggle="modal" id="id_edit{{$item->id}}"
+                                                        <a class="id_edit btn btn-xs btn-info" data-target="#AddModel" data-toggle="modal" id="id_edit{{$item->id}}"
                                                         data-id="{{$item->id}}" data-HoTen="{{$item->HoTen}}" data-SoDienThoai="{{$item->SoDienThoai}}" data-VoteTime="{{$item->VoteTime}}">
                                                             <i class="ace-icon fa fa-pencil bigger-120"></i>
                                                         </a>
@@ -179,7 +179,7 @@
 
                                                             <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
                                                                 <li>
-                                                                    <a href="#" class="tooltip-success" data-rel="tooltip" data-target="#AddModel" data-toggle="modal" title="Edit"
+                                                                    <a href="#" class="id_edit tooltip-success" data-rel="tooltip" data-target="#AddModel" data-toggle="modal" title="Edit"
                                                                        id="id_edit{{$item->id}}"
                                                                        data-id="{{$item->id}}" data-HoTen="{{$item->HoTen}}" data-SoDienThoai="{{$item->SoDienThoai}}" data-VoteTime="{{$item->VoteTime}}">
                                                                         <span class="green">
