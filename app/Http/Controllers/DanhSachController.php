@@ -28,13 +28,13 @@ class DanhSachController extends Controller
             $add->save();
             return redirect()->route('home');
         }
-        $danhsach = DanhSachCauThu::where('status', 1)->paginate(5);
+        $danhsach = DanhSachCauThu::where('status', 1)->paginate(10);
         return view('welcome', compact('danhsach'));
     }
 
     public function indexDaboash()
     {
-        $danhsach = DanhSachCauThu::paginate(3);
+        $danhsach = DanhSachCauThu::paginate(20);
         return view('daboash', compact('danhsach'));
     }
 
