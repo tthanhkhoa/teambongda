@@ -33,16 +33,15 @@
                     <small class="hero-subtitle">Thông tin cơ bản.</small>
                     <div class="product-features">
                         <h2>Danh sách cầu thủ : </h2>
-                        {{--<ul class="check-list">--}}
-                        <ul>
+                        <ul class="check-list">
                             @php $i = 1; @endphp
                             @foreach($danhsach as $item)
                             <li>{{ $i }} - {{$item->HoTen}} - {{$item->SoDienThoai}} - Vote Time: {{$item->VoteTime}}</li>
                                 @php $i++; @endphp
                             @endforeach
                         </ul>
+                        {{ $danhsach->links() }}
                     </div>
-                    {{ $danhsach->links() }}
                     <div class="ribbon"><strong>Đăng Ký Tham Gia Tại Đây </strong></div>
                 </div>
                 <div class="col-md-4">
