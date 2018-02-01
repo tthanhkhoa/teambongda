@@ -161,7 +161,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="hidden-sm hidden-xs btn-group">
-                                                        <a class="btn btn-xs btn-info">
+                                                        <a class="btn btn-xs btn-info" data-target="#AddModel" data-toggle="modal">
                                                             <i class="ace-icon fa fa-pencil bigger-120"></i>
                                                         </a>
 
@@ -178,7 +178,7 @@
 
                                                             <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
                                                                 <li>
-                                                                    <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+                                                                    <a href="#" class="tooltip-success" data-rel="tooltip" data-target="#AddModel" data-toggle="modal" title="Edit">
                                                                         <span class="green">
                                                                             <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
                                                                         </span>
@@ -259,6 +259,50 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Huỷ</button>
                     <a id="delete_" class="btn btn-danger btn-ok">Đồng ý!!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ng-scope" id="AddModel" role="modal" style="display: none;" aria-hidden="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="false">×</span></button>
+                    <h4 class="modal-title">Thêm Thể Loại</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <form id="registrationForm"  class="form-horizontal ng-pristine ng-valid">
+                                {!! csrf_field() !!}
+
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">Họ và tên</label>
+                                    <div class="col-lg-10">
+                                        <input id="maTheLoai" type="text" class="form-control ng-pristine ng-untouched ng-valid" name="HoTen" placeholder="Mã thể loại" ng-model="currItem.name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">Số điện thoại</label>
+                                    <div class="col-lg-10">
+                                        <input id="tenTheLoai" type="text" class="form-control ng-pristine ng-untouched ng-valid" name="SoDienThoai" placeholder="Tên thể loại" ng-model="currItem.major">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">Vote time</label>
+                                    <div class="col-lg-10">
+                                        <input id="tenTheLoai" type="text" class="form-control ng-pristine ng-untouched ng-valid" name="VoteTime" placeholder="Tên thể loại" ng-model="currItem.major">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button id="edit" type="button "   class="edit btn btn-primary" >Save changes</button>
+                                </div>
+                            </form>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
                 </div>
             </div>
         </div>
