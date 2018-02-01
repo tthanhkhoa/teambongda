@@ -2,10 +2,6 @@ html, mark {
     color: #000
 }
 
-.pagination, ol, ul {
-    padding-left: 0
-}
-
 .cta, .site-footer, .testimonial {
     text-align: center
 }
