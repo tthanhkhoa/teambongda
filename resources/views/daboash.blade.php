@@ -144,9 +144,9 @@
                                             </tr>
                                         </thead>
 
-                                        <tbody>
+                                        <tbody id="rowDanhSach">
                                         @foreach($danhsach as $item)
-                                            <tr>
+                                            <tr id="{{$item->id}}">
                                                 <td>{{$item->id}}</td>
                                                 <td>{{$item->HoTen}}</td>
                                                 <td>{{$item->SoDienThoai}}</td>
@@ -161,11 +161,12 @@
                                                 </td>
                                                 <td>
                                                     <div class="hidden-sm hidden-xs btn-group">
-                                                        <a class="btn btn-xs btn-info" data-target="#AddModel" data-toggle="modal">
+                                                        <a class="btn btn-xs btn-info" data-target="#AddModel" data-toggle="modal" id="id_edit{{$item->id}}"
+                                                        data-id="{{$item->id}}" data-HoTen="{{$item->HoTen}}" data-SoDienThoai="{{$item->SoDienThoai}}" data-VoteTime="{{$item->VoteTime}}">
                                                             <i class="ace-icon fa fa-pencil bigger-120"></i>
                                                         </a>
 
-                                                        <a class="btn btn-xs btn-danger" data-target="#confirm_delete" data-toggle="modal" data-id="{{$item->id}}">
+                                                        <a class="btn btn-xs btn-danger" data-id="{{$item->id}}" data-target="#confirm_delete" data-toggle="modal" data-id="{{$item->id}}">
                                                             <i class="ace-icon fa fa-trash-o bigger-120"></i>
                                                         </a>
                                                     </div>
@@ -178,7 +179,9 @@
 
                                                             <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
                                                                 <li>
-                                                                    <a href="#" class="tooltip-success" data-rel="tooltip" data-target="#AddModel" data-toggle="modal" title="Edit">
+                                                                    <a href="#" class="tooltip-success" data-rel="tooltip" data-target="#AddModel" data-toggle="modal" title="Edit"
+                                                                       id="id_edit{{$item->id}}"
+                                                                       data-id="{{$item->id}}" data-HoTen="{{$item->HoTen}}" data-SoDienThoai="{{$item->SoDienThoai}}" data-VoteTime="{{$item->VoteTime}}">
                                                                         <span class="green">
                                                                             <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
                                                                         </span>
@@ -269,7 +272,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="false">×</span></button>
-                    <h4 class="modal-title">Thêm Thể Loại</h4>
+                    <h4 class="modal-title">Cập nhật thông tin</h4>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -281,19 +284,19 @@
                                 <div class="form-group">
                                     <label class="col-lg-2 control-label">Họ và tên</label>
                                     <div class="col-lg-10">
-                                        <input id="maTheLoai" type="text" class="form-control ng-pristine ng-untouched ng-valid" name="HoTen" placeholder="Mã thể loại" ng-model="currItem.name">
+                                        <input id="HoTen" type="text" class="form-control ng-pristine ng-untouched ng-valid" name="HoTen" placeholder="Họ và tên" ng-model="currItem.name">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-2 control-label">Số điện thoại</label>
                                     <div class="col-lg-10">
-                                        <input id="tenTheLoai" type="text" class="form-control ng-pristine ng-untouched ng-valid" name="SoDienThoai" placeholder="Tên thể loại" ng-model="currItem.major">
+                                        <input id="SoDienThoai" type="text" class="form-control ng-pristine ng-untouched ng-valid" name="SoDienThoai" placeholder="Số điện thoại" ng-model="currItem.major">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-2 control-label">Vote time</label>
                                     <div class="col-lg-10">
-                                        <input id="tenTheLoai" type="text" class="form-control ng-pristine ng-untouched ng-valid" name="VoteTime" placeholder="Tên thể loại" ng-model="currItem.major">
+                                        <input id="VoteTime" type="text" class="form-control ng-pristine ng-untouched ng-valid" name="VoteTime" placeholder="Vote Time" ng-model="currItem.major">
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -328,6 +331,18 @@
     <!-- ace scripts -->
     <script src="{{asset('assets/js/ace-elements.min.js')}}"></script>
     <script src="{{asset('assets/js/ace.min.js')}}"></script>
+<script>
+    $('tbody#rowDanhSach').on('click','.id_edit',function(){
+        var HoTen = $(this).data('HoTen');
+        var SoDienThoai = $(this).data('SoDienThoai');
+        var VoteTime = $(this).data('VoteTime');
+
+        var modal = $('#AddModel');
+        modal.find("#HoTen").val(HoTen);
+        modal.find("#SoDienThoai").val(SoDienThoai);
+        modal.find("#VoteTime").val(VoteTime);
+    });
+</script>
 </body>
 
 </html>
