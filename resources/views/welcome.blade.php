@@ -39,7 +39,7 @@
                             @endforeach
                         </ul>
                     </div>
-
+                    {{ $danhsach->links() }}
                     <div class="ribbon"><strong>Đăng Ký Tham Gia Tại Đây </strong></div>
                 </div>
                 <div class="col-md-4">
