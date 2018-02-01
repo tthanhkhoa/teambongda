@@ -155,7 +155,7 @@
 
                                                 <td>
                                                     <label class="pos-rel">
-                                                        <input type="checkbox" {{$item->status == 1 ? 'checked':''}} />
+                                                        <input type="checkbox" {{$item->Status == 1 ? 'checked':''}} />
                                                         <span class="lbl"></span>
                                                     </label>
                                                 </td>
