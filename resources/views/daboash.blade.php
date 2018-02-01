@@ -333,9 +333,9 @@
     <script src="{{asset('assets/js/ace.min.js')}}"></script>
 <script>
     $('tbody#rowDanhSach').on('click','.id_edit',function(){
-        var HoTen = $(this).data('HoTen');
-        var SoDienThoai = $(this).data('SoDienThoai');
-        var VoteTime = $(this).data('VoteTime');
+        var HoTen = $(this).data('hoten');
+        var SoDienThoai = $(this).data('soidenthoai');
+        var VoteTime = $(this).data('votetime');
         console.log('textbox');
         console.log(HoTen + "-" + SoDienThoai + "-"+VoteTime );
         var modal = $('#AddModel');
