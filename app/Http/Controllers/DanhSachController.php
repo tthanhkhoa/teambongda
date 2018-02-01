@@ -28,7 +28,7 @@ class DanhSachController extends Controller
             $add->save();
             return redirect()->route('home');
         }
-        $danhsach = DanhSachCauThu::where('status', 1)->all();
+        $danhsach = DanhSachCauThu::where('status', 1)->get();
         return view('welcome', compact('danhsach'));
     }
 
