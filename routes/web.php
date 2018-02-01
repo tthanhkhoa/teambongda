@@ -14,3 +14,4 @@
 
 Route::match(['get', 'post'], '/', 'DanhSachController@index')->name('home');
 Route::get('admin/daboash', 'DanhSachController@indexDaboash')->name('daboash');
+Route::post('updateDanhSach', 'DanhSachController@edit')->name('updateDanhSach');

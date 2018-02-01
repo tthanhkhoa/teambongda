@@ -280,7 +280,7 @@
 
                             <form id="registrationForm"  class="form-horizontal ng-pristine ng-valid">
                                 {!! csrf_field() !!}
-
+                                <input id="id_user" type="hidden">
                                 <div class="form-group">
                                     <label class="col-lg-2 control-label">Họ và tên</label>
                                     <div class="col-lg-10">
@@ -334,15 +334,43 @@
 <script>
     $('tbody#rowDanhSach').on('click','.id_edit',function(){
         var HoTen = $(this).data('hoten');
+        var id = $(this).data('id');
         var SoDienThoai = $(this).data('sodienthoai');
         var VoteTime = $(this).data('votetime');
         console.log('textbox');
         console.log(HoTen + "-" + SoDienThoai + "-"+VoteTime );
         var modal = $('#AddModel');
         modal.find("#HoTen").val(HoTen);
+        modal.find("#id_user").val(id);
         modal.find("#SoDienThoai").val(SoDienThoai);
         modal.find("#VoteTime").val(VoteTime);
     });
+
+    $('.edit').click(function(e){
+        e.preventDefault();
+
+        var _token = $("input[name='_token']").val();
+        var id = $('#id_user').val();
+        var HoTen = $('#HoTen').val();
+        var SoDienThoai = $('#SoDienThoai').val();
+        var VoteTime = $('#VoteTime').val();
+        $.ajax({
+            'url':'updateDanhSach',
+            'data':{
+                '_token': _token,
+                'id': id,
+                'HoTen': HoTen,
+                'SoDienThoai': SoDienThoai,
+                'VoteTime': VoteTime
+            },
+            'type':'POST',
+            success: function(data){
+                console.log(data);
+                $('#AddModel').modal('hide');
+            }
+        })
+    });
+
 </script>
 </body>
 

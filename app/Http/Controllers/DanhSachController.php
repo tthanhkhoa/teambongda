@@ -78,9 +78,22 @@ class DanhSachController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
         //
+        if ($request->isMethod('post')) {
+            $this->validate($request, [
+                'HoTen' => 'required|max:255',
+                'SoDienThoai' => 'required',
+                'VoteTime' => 'required',
+            ]);
+            $add = new DanhSachCauThu();
+            $add->HoTen = $request->HoTen;
+            $add->SoDienThoai = $request->SoDienThoai;
+            $add->VoteTime = $request->VoteTime;
+            $add->save();
+            return $add;
+        }
     }
 
     /**
