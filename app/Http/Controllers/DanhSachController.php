@@ -25,6 +25,7 @@ class DanhSachController extends Controller
             $add->HoTen = $request->HoTen;
             $add->SoDienThoai = $request->SoDienThoai;
             $add->VoteTime = $request->VoteTime;
+            $add->Status = 1;
             $add->save();
             return redirect()->route('home');
         }
