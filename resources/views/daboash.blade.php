@@ -334,7 +334,7 @@
 <script>
     $('tbody#rowDanhSach').on('click','.id_edit',function(){
         var HoTen = $(this).data('hoten');
-        var SoDienThoai = $(this).data('soidenthoai');
+        var SoDienThoai = $(this).data('sodienthoai');
         var VoteTime = $(this).data('votetime');
         console.log('textbox');
         console.log(HoTen + "-" + SoDienThoai + "-"+VoteTime );
