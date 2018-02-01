@@ -336,7 +336,8 @@
         var HoTen = $(this).data('HoTen');
         var SoDienThoai = $(this).data('SoDienThoai');
         var VoteTime = $(this).data('VoteTime');
-
+        console.log('textbox');
+        console.log(HoTen + "-" + SoDienThoai + "-"+VoteTime );
         var modal = $('#AddModel');
         modal.find("#HoTen").val(HoTen);
         modal.find("#SoDienThoai").val(SoDienThoai);
