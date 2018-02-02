@@ -92,8 +92,7 @@ class DanhSachController extends Controller
             $edit->SoDienThoai = $request->SoDienThoai;
             $edit->VoteTime = $request->VoteTime;
             $edit->save();
-            return true;
-        }
+            return response()->json(['result'=>true]);        }
     }
 
     /**

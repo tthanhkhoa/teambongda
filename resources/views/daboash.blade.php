@@ -368,7 +368,7 @@
             'type':'POST',
             success: function(data){
                 $('#AddModel').modal('hide');
-                if(data === true){
+                if(data.result === true){
                     console.log('congrate edit');
                     iziToast.success({
                         title: 'Thông Báo',
