@@ -26,6 +26,7 @@
         <![endif]-->
     <link rel="stylesheet" href="{{asset('assets/css/ace-skins.min.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/ace-rtl.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/iziToast.min.css')}}" />
 
     <!--[if lte IE 9]>
           <link rel="stylesheet" href="{{asset('assets/css/ace-ie.min.css')}}" />
@@ -35,6 +36,7 @@
 
     <!-- ace settings handler -->
     <script src="{{asset('assets/js/ace-extra.min.js')}}"></script>
+    <script src="{{asset('js/iziToast.min.js')}}"></script>
 
     <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
@@ -365,8 +367,14 @@
             },
             'type':'POST',
             success: function(data){
-                console.log(data);
                 $('#AddModel').modal('hide');
+                if(data === true){
+                    console.log('congrate edit');
+                    iziToast.success({
+                        title: 'Thông Báo',
+                        message: 'Đã cập nhật thành công!',
+                    });
+                }
             }
         })
     });
