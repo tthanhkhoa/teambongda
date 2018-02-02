@@ -150,9 +150,9 @@
                                         @foreach($danhsach as $item)
                                             <tr id="{{$item->id}}">
                                                 <td>{{$item->id}}</td>
-                                                <td>{{$item->HoTen}}</td>
-                                                <td>{{$item->SoDienThoai}}</td>
-                                                <td>{{$item->VoteTime}}</td>
+                                                <td id="HoTen{{$item->HoTen}}">{{$item->HoTen}}</td>
+                                                <td id="SoDienThoai{{$item->SoDienThoai}}">{{$item->SoDienThoai}}</td>
+                                                <td id="VoteTime{{$item->VoteTime}}">{{$item->VoteTime}}</td>
                                                 <td>{{$item->created_at}}</td>
 
                                                 <td>
@@ -369,10 +369,18 @@
             success: function(data){
                 $('#AddModel').modal('hide');
                 if(data.result === true){
+                    $('#HoTen' + id).html(HoTen);
+                    $('#SoDienThoai' + id).html(SoDienThoai);
+                    $('#VoteTime' + id).html(VoteTime);
                     console.log('congrate edit');
                     iziToast.success({
                         title: 'Thông Báo',
                         message: 'Đã cập nhật thành công!',
+                    });
+                }else {
+                    iziToast.error({
+                        title: 'Thông báo',
+                        message: 'Trong quá trình cập nhật đã xuất hiện lỗi.',
                     });
                 }
             }
