@@ -150,9 +150,9 @@
                                         @foreach($danhsach as $item)
                                             <tr id="{{$item->id}}">
                                                 <td>{{$item->id}}</td>
-                                                <td id="HoTen{{$item->HoTen}}">{{$item->HoTen}}</td>
-                                                <td id="SoDienThoai{{$item->SoDienThoai}}">{{$item->SoDienThoai}}</td>
-                                                <td id="VoteTime{{$item->VoteTime}}">{{$item->VoteTime}}</td>
+                                                <td id="HoTen{{$item->id}}">{{$item->HoTen}}</td>
+                                                <td id="SoDienThoai{{$item->id}}">{{$item->SoDienThoai}}</td>
+                                                <td id="VoteTime{{$item->id}}">{{$item->VoteTime}}</td>
                                                 <td>{{$item->created_at}}</td>
 
                                                 <td>
