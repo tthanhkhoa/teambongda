@@ -372,6 +372,13 @@
                     $('#HoTen' + id).html(HoTen);
                     $('#SoDienThoai' + id).html(SoDienThoai);
                     $('#VoteTime' + id).html(VoteTime);
+                    var id_edit = 'edit' + masanpham;
+                    var temp = document.getElementById(id_edit);
+                    temp.setAttribute("data-HoTen", HoTen);
+                    temp.setAttribute("data-SoDienThoai", SoDienThoai);
+                    temp.setAttribute("data-VoteTime", VoteTime);
+                    var content = temp.outerHTML;
+                    temp.outerHTML = content;
                     console.log('congrate edit');
                     iziToast.success({
                         title: 'Thông Báo',
