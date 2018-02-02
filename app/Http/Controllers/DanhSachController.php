@@ -92,7 +92,8 @@ class DanhSachController extends Controller
             $edit->SoDienThoai = $request->SoDienThoai;
             $edit->VoteTime = $request->VoteTime;
             $edit->save();
-            return response()->json(['result'=>true]);        }
+            return response()->json(['result'=>true]);
+        }
     }
 
     /**
@@ -102,9 +103,20 @@ class DanhSachController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateStatus(Request $request)
     {
         //
+        $this->validate($request, [
+            'id' => 'required|max:255',
+            'status' => 'required'
+        ]);
+        $edit = DanhSachCauThu::find($request->id);
+        $status = 1;
+        if($request->status == 1)
+            $status = 0;
+        $edit->status = $status;
+        $edit->save();
+        return response()->json(['result'=>true, 'status' => $status]);
     }
 
     /**

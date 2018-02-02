@@ -157,7 +157,7 @@
 
                                                 <td>
                                                     <label class="pos-rel">
-                                                        <input type="checkbox" {{$item->Status == 1 ? 'checked':''}} />
+                                                        <input id="status{{$item->id}}" class="status" data-id="{{$item->id}}" data-status="{{$item->Status}}" type="checkbox" {{$item->Status == 1 ? 'checked':''}} />
                                                         <span class="lbl"></span>
                                                     </label>
                                                 </td>
@@ -348,6 +348,42 @@
         modal.find("#VoteTime").val(VoteTime);
     });
 
+    $('.status').click(function(e){
+        e.preventDefault();
+        console.log('change status');
+        var _token = $("input[name='_token']").val();
+        var id = $(this).data('id');
+        var status = $(this).data('status');
+        $.ajax({
+            'url':'updateStatusDanhSach',
+            'data':{
+                '_token': _token,
+                'id': id,
+                'status': status
+            },
+            'type':'POST',
+            success: function(data){
+                if(data.result === true){
+                    var id_status = 'status' + id;
+                    var temp = document.getElementById(id_status);
+                    temp.setAttribute("data-status", data.status);
+                    var content = temp.outerHTML;
+                    temp.outerHTML = content;
+                    console.log(data);
+                    iziToast.success({
+                        title: 'Thông Báo',
+                        message: 'Đã cập nhật thành công!',
+                    });
+                }else {
+                    iziToast.error({
+                        title: 'Thông báo',
+                        message: 'Trong quá trình cập nhật đã xuất hiện lỗi.',
+                    });
+                }
+            }
+        })
+    });
+
     $('.edit').click(function(e){
         e.preventDefault();
 
@@ -374,9 +410,9 @@
                     $('#VoteTime' + id).html(VoteTime);
                     var id_edit = 'edit' + masanpham;
                     var temp = document.getElementById(id_edit);
-                    temp.setAttribute("data-HoTen", HoTen);
-                    temp.setAttribute("data-SoDienThoai", SoDienThoai);
-                    temp.setAttribute("data-VoteTime", VoteTime);
+                    temp.setAttribute("data-hoten", HoTen);
+                    temp.setAttribute("data-sodienthoai", SoDienThoai);
+                    temp.setAttribute("data-votetime", VoteTime);
                     var content = temp.outerHTML;
                     temp.outerHTML = content;
                     console.log('congrate edit');

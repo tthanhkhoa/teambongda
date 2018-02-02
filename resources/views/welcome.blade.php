@@ -32,7 +32,7 @@
                     <div class="product-features">
                         <h2>Danh sách cầu thủ : </h2>
                         <ul class="check-list">
-                            @php $i = (($danhsach->currentPage()-1)*5)+1; @endphp
+                            @php $i = (($danhsach->currentPage()-1)*10)+1; @endphp
                             @foreach($danhsach as $item)
                             <li>{{ $i }} - {{$item->HoTen}} - {{$item->SoDienThoai}} - Vote Time: {{$item->VoteTime}}</li>
                                 @php $i++; @endphp

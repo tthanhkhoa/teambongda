@@ -15,3 +15,4 @@
 Route::match(['get', 'post'], '/', 'DanhSachController@index')->name('home');
 Route::get('admin/daboash', 'DanhSachController@indexDaboash')->name('daboash');
 Route::post('admin/updateDanhSach', 'DanhSachController@edit')->name('updateDanhSach');
+Route::post('admin/updateStatusDanhSach', 'DanhSachController@edit')->name('updateStatusDanhSach');
